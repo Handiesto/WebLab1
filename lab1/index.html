@@ -1,0 +1,114 @@
+<?php session_start(); ?>
+<html>
+
+<head>
+	<link rel="stylesheet" type="text/css" href="styles/styles.css">
+	<title>Lab 1</title>
+
+</head>
+
+<body>
+	<TABLE border="0" cellpadding="5" width="100%">
+
+		<thead>
+			<tr>
+				<td colspan="2">
+					<H2 align="center">Лабораторная работа № 1 по Веб-Программированию</H3>
+					<H3 align="center">Вариант № 2218</H3>
+					
+				</td>
+			</tr>
+		</thead>
+
+		<tbody>
+			<tr>
+				<td ><IMG SRC="img/Graph.png" class="graph" align=middle width="250" height="250"></td>
+				<td>
+					<form action="php/check.php" method="get" onsubmit="return validateForm();" target="result">
+						<label for="x">
+							<span class = "vText"> Enter X: 
+							<span id="xInbound"> ∈ [-5; 3]</span></span>
+                         <br>
+                        <p class="vyravn">
+                        	<input class="select" id="x" type="text" name="x" placeholder="Enter 'X' here" oninput="checkInbound(this)">
+                        </p>
+                        
+             
+
+                    </label>
+                    <label for="y">
+								<span class = "vText"> Type Y: </span>
+								<p class="vyravn"><select   name="y[]" id="ySelect" class="select">
+    							<option value="-5">-5</option>
+    							<option value="-4">-4</option>
+    							<option value="-3">-3</option>
+    							<option value="-2">-2</option>
+    							<option value="-1">-1</option>
+    							<option selected value="0">0</option>
+    							<option value="1">1</option>
+    							<option value="2">2</option>
+    							<option value="3">3</option>
+   							</select></p>
+   							
+							</label>
+							<p class = "vText"> Type R: </p>
+							<span class="vyravn">
+							<label for="r1">
+                        <input type="checkbox" name="r" value="1" class="rRadioButton" id="r1" onclick="checkboxValidate(this)">
+                        <span class="rText">1</span>
+                    </label>
+
+                    <label for="r2">
+                        <input type="checkbox" name="r" value="2" class="rRadioButton" id="r2" onclick="checkboxValidate(this)">
+                        <span class="rText">2</span>
+                    </label>
+
+                    <label for="r3">
+                        <input type="checkbox" name="r" value="3" class="rRadioButton" id="r3" onclick="checkboxValidate(this)">
+                        <span class="rText">3</span>
+                    </label>
+                    <label for="r4">
+                        <input type="checkbox" name="r" value="4" class="rRadioButton" id="r3" onclick="checkboxValidate(this)">
+                        <span class="rText">4</span>
+                    </label>
+                    <label for="r5">
+                        <input type="checkbox" name="r" value="5" class="rRadioButton" id="r3" onclick="checkboxValidate(this)">
+                        <span class="rText">5</span>
+                    </label>
+                    </span>
+                    <br>
+                    <span class="vyravn1">
+                    <input type="submit" id="send_button" name="send" value="Отправить" align="right" size="3px">
+                    </span>
+					</form>
+					
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<H3 align="center">Результат</H3>
+
+            			<iframe name="result" src="php/table.php"></iframe>
+						
+
+            			
+        </table>
+        </tr>
+				</td>
+			</tr>
+		</tbody>
+		
+		<tfoot>
+			
+			<tr>
+				<td colspan="2">
+					<H4 align="center">Студент: Плясов К.Е.</H4>
+					<H4 align="center">Группа: P3211</H4>
+				</td>
+			</tr>
+		</tfoot>
+
+	</TABLE>
+<script type="text/javascript" src="js/validator.js"></script>
+</body>
+</html>
